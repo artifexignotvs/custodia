@@ -1,0 +1,34 @@
+name: Reproducible defect
+description: Report a compatibility, analysis or consistency failure with a benign example.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For a suspected containment escape or confidential-data exposure, use private security reporting.
+        Do not upload confidential specimens or unreviewed session bundles. Remove personal paths and identifiers from diagnostics.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of custodia --version and the release tag or commit.
+    validations:
+      required: true
+  - type: textarea
+    id: host
+    attributes:
+      label: Supported prerequisites
+      description: Linux distribution, system Python, systemd and bubblewrap versions; sanitized doctor result.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Minimal commands, selected policy, expected behavior and actual result. Use a benign redistributable fixture.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Observed scope
+      description: Did this affect triage, Ghidra, verification, retry, or cleanup? Include the recorded status and whether the failure repeats.

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "custodia"
+version = "0.1.0"
+description = "Bounded binary analysis with verified Linux isolation and portable execution receipts"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Artifex Ignotvs"}]
+dependencies = []
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+]
+
+[project.urls]
+Homepage = "https://github.com/artifexignotvs/custodia"
+Issues = "https://github.com/artifexignotvs/custodia/issues"
+
+[project.scripts]
+custodia = "custodia.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"custodia.providers" = ["scripts/*.java"]

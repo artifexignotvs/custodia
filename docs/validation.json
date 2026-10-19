@@ -1,0 +1,60 @@
+{
+  "schema": "custodia.release-validation.v1",
+  "version": "0.1.0",
+  "date": "2026-10-20",
+  "engine_sha256": "cfb1afa0b2cb52a463bb95f66da0dd3406c82eb219866e9dd38f58cec404392c",
+  "released_wheel_sha256": "4fa034f5f3eb746460bba1300e437b158a3ca11b0ffdd7d7ea8382275e7ff6dc",
+  "source_suite": {
+    "tests": 104,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "real_boundary_enabled": true,
+    "real_ghidra_enabled": true
+  },
+  "installed_wheel": {
+    "full_analysis": "completed",
+    "hard_timeout": "timeout",
+    "triage_survived": true,
+    "same_policy_retry": "reused_triage",
+    "changed_policy_retry": "reran_triage_and_completed",
+    "verified_sessions": 4,
+    "sampled_function_differences": 0,
+    "source_unchanged": true,
+    "show_limit_observed": true,
+    "isolated_interpreter": true,
+    "imported_from_installed_package": true,
+    "doctor_passed": true,
+    "selftest_passed": true,
+    "selftest_checks": 9,
+    "selftest_check_ids": [
+      "isolation",
+      "host_canary",
+      "input_readonly",
+      "network",
+      "pids",
+      "memory",
+      "timeout",
+      "output",
+      "scratch"
+    ]
+  },
+  "toolchain": {
+    "ghidra": "12.1.4",
+    "jdk": "21.0.12.1+1",
+    "systemd": "255.4",
+    "bubblewrap": "0.9.0",
+    "cli_python": "3.13.5",
+    "sandbox_python": "3.12.3"
+  },
+  "ghidra_reference": {
+    "repeat_native_reports_byte_identical": true,
+    "native_isolated_all_fields_equal": true,
+    "isolated_enforcement_verified": true,
+    "isolated_cleanup_verified": true,
+    "fixture_sha256": "1ef9c9fd407489073d5e340ad99e05b3f6f90a5e38fd9617893bc2472ab533e7",
+    "real_analysis_timeout_partial_verified": true,
+    "scope": "small benign compiled ELF fixture; no target execution"
+  },
+  "assurance": "Maintainer-recorded observations on one host and the included benign fixture. No independent attestation or universal containment claim."
+}
